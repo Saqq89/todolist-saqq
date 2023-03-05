@@ -1,0 +1,184 @@
+:root {
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
+body {
+	background: gainsboro;
+	color: var(--dark);
+}
+
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5em;
+}
+
+h3 {
+	color: black;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+
+.cabecera .titulo {
+    display: flex;
+    margin-left: 0.5rem;
+	flex: 1 1 0%;
+	min-width: 0;
+    color: darkblue;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.crear-pendiente input[type="text"] {
+    display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: black;
+	background-color: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: black;
+	margin-bottom: 1.5rem;
+}
+
+.crear-pendiente .agregar {
+    display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #FFF;
+	background-color: darkblue;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.shown-button {
+    display: flex;
+	align-items: center;
+}
+
+.shown-button .actions {
+    margin-right: 100px;
+    margin-left: 120px;
+    display: flex;
+	align-items: center;
+    display: block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+    background-color: darkblue;
+}
+
+.shown-button button:hover {
+    opacity: 0.75;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid darkblue;
+	box-shadow: darkblue;
+}
+
+.bubble::after {
+	content: "";
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: darkblue;
+	box-shadow: darkblue;
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.crear-pendiente .agregar :hover{
+    opacity: 0.75;
+}
+
+.lista-pend .lista {
+    margin: 1rem 0;
+}
+
+.lista-pend .todo-item {
+    display: flex;
+	align-items: center;
+	background-color: #FFF;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+}
+
+.todo-item label {
+	display: block;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.todo-item .todo-content {
+	flex: 1 1 0%;
+}
+
+.todo-item .todo-content span {
+	color: var(--dark);
+	font-size: 1.125rem;
+}
+
+.todo-item .actions {
+	display: flex;
+	align-items: center;
+}
+
+.todo-item .actions button {
+	display: block;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+	opacity: 0.75;
+}
+
+.todo-item .actions .delete {
+	background-color: darkblue;
+}
+
